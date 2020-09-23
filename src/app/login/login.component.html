@@ -1,0 +1,18 @@
+
+<div [class.bordered]="isBordered">
+        <div *ngIf="!submitted">
+            <h3>Login</h3>
+            <label>User Name </label><input type="text" name="userName" #userName><br>
+            <br>
+            <label>Password </label><input type="password"  name="password" #password>
+            <br>
+            <button (click)="onSubmit(userName.value,password.value)">Login</button>
+        </div>
+      
+        <div *ngIf="submitted">
+          <div *ngIf="isAuthenticated">Welcome {{userName}}</div>
+          <div *ngIf="!isAuthenticated">Invalid Login!! Please try again...</div>
+          <br>
+          <button (click)="submitFalse()">Back</button>
+        </div>
+      </div>

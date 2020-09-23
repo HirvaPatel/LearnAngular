@@ -1,0 +1,86 @@
+<b><hr></b>
+<h4><u>Assignment 1!!</u></h4>
+<app-search-book></app-search-book>
+<hr>
+
+<h4><u>Assignment 2!!</u></h4>
+<app-birthdate></app-birthdate>
+<hr>
+<h4><u>Assignment 3!!</u></h4>
+<app-paint-text></app-paint-text>
+<hr>
+<app-login></app-login>
+<hr>
+
+<div [ngStyle]="{
+                color: color,
+                'font-size': fontSize
+                }">
+  <ul>
+    <li *ngFor="let course of courses; let i = index">
+    {{i}} - {{course.name}}
+  </li>
+  </ul>
+</div>
+
+<hr>
+<app-password-checker></app-password-checker>
+
+<hr>
+
+ <app-image-zooming></app-image-zooming>
+<br>
+<hr>
+<div>
+<input type="button" [disabled]='okCancel' value="OK">
+<input type="button" disabled='{{okCancel}}' value="Cancel">
+</div>
+<br><br>
+<hr>
+
+<h3> {{tableName | titlecase}}</h3>
+<table>
+  <tr>
+    <th>Product Code</th>
+    <td>{{productCode | lowercase}}</td>
+  </tr>
+  <tr>
+    <th>Product Name</th>
+    <td>{{productName | uppercase}}</td>
+  </tr>
+</table>
+
+<hr>
+<app-greet-lang></app-greet-lang>
+<br>
+<hr>
+<app-product-rating></app-product-rating>
+
+<hr>
+<app-change-currency></app-change-currency>
+<hr>
+<div class="popularCourses">
+  <h3>Popular courses</h3>
+  <button (click)="show=true">View Course List</button>
+  <br><br>
+  <div *ngIf="show">
+    <app-course-list></app-course-list>
+  </div>
+</div>
+
+<hr>
+<div>
+    <h3>Assignment 5!!</h3>
+<app-input></app-input>
+</div>
+<hr>
+<app-output></app-output>
+<hr>
+<app-course-form></app-course-form>
+<br><br><br><br>
+
+<app-reative-form></app-reative-form>
+<br><br><br>
+<app-book></app-book>
+<app-hero></app-hero>
+<app-employee></app-employee>

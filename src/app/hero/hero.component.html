@@ -1,0 +1,32 @@
+<h4>My Heros</h4>
+<ul class="heros">
+    <li *ngFor="let hero of Heros">
+        <span class="badge">{{hero.character}}</span> {{hero.name}}
+    </li>
+</ul>
+<button (click)="add_hero=true">Do you want to add any new Hero?</button>
+<br><br>
+<div *ngIf="add_hero">
+        <table>
+                <tr>
+                  <td>Enter Charactername:</td>
+                  <td>
+                    <input type="text" #char>
+                  </td>
+                </tr>
+                <br/>
+                <tr>
+                  <td>Enter Real Name :</td>
+                  <td>
+                    <input type="text" #name>
+                    <br>
+                  </td>
+                </tr>
+                <br>
+                <tr>
+                  <td>
+                    <button (click)="addHero(char.value,name.value);add_hero=false">Add Hero</button>
+                  </td>
+                </tr>
+              </table>
+</div>

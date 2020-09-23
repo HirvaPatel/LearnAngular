@@ -1,0 +1,13 @@
+<div>
+        <h3>Wish in different language</h3>
+        <label>Enter your Name</label><input type="text" #name>
+        <label>Select language to display</label>
+        <select #language (change)="message = language.value">
+          <option value='en'>English</option>
+          <option value='fr'>French</option>
+          <option value='ge'>German</option>
+        </select>  
+      <br>
+        <div *ngIf="message">{{message | i18nSelect:messageMap}}, {{name.value}}</div>
+      
+      </div>

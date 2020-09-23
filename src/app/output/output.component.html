@@ -1,0 +1,8 @@
+<app-output-decorator (OnRegister)="courseReg($event)" (OnChangeColor)="txtColor=$event"></app-output-decorator>
+
+<br><br>
+<div *ngIf="regMsg">{{regMsg}}</div>
+
+<div>
+  <p (click)="changedColor=txtColor" [style.color]="changedColor">This is a color changer!!</p>
+</div>

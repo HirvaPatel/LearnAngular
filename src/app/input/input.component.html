@@ -1,0 +1,21 @@
+<h3>
+        Course Details
+      </h3>
+      <label>Select a course to view</label>
+      <select #course (change)=" cname = course.value">
+        <option value="Angular">Angular</option>
+        <option value="TypeScript">TypeScript</option>
+        <option value="Node JS">Node JS</option>
+        <option value="React JS">React JS</option>
+      </select>
+      <hr>
+      
+      <div>Parent Component<br> Select a genre<br>
+          <select #genre (change)="category = genre.value">
+            <option value="action">Action</option>
+            <option value="romance">Romance</option>
+            <option value="mystry">Mystry</option>
+          </select>
+      </div>
+      <app-input-decorator [cName]="cname" [Category]="category"></app-input-decorator>
+    

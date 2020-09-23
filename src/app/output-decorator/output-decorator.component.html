@@ -1,0 +1,17 @@
+<table>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+        </tr>
+        <tr *ngFor="let course of courses">
+                <td>{{course.id}}</td>
+                <td>{{course.name}}</td>
+            <td><button (click)="register(course.name)">Register</button></td>
+        </tr>
+</table>
+
+<hr>
+<h3><u>Assignment 4!!</u></h3>
+<button value="Red" (click)="changeColor($event)">Red</button><button value="Blue" (click)="changeColor($event)">Blue</button><button value="Green" (click)="changeColor($event)">Green</button>
+    
+    

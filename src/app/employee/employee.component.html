@@ -1,0 +1,34 @@
+<h4>Employees Table</h4>
+<table>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.age}}</td>
+        <button (click)="update=true;empId=emp.empId">Update</button>
+    </tr>
+</table>
+<div *ngIf="update">
+    The selected employee is {{empId}}
+    <button (click)="updateDet=true">Update Details</button>
+</div>
+<br><br>
+<div *ngIf="updateDet">
+    <form (ngSubmit)="updateDetail()" #courseForm="ngForm">
+        <div class="form-group">
+          <label for="id">Emp Id</label>
+          <input type="text" class="form-control" required [(ngModel)]="empId" name="id" #id="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="name">Emp Name</label>
+            <input type="text" class="form-control" required [(ngModel)]="empName" name="name" #id="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" required [(ngModel)]="age" name="age" #id="ngModel">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-default" (click)="updateDetail()">Update</button>
+        <br>
+</form>
+
+</div>

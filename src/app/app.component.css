@@ -1,0 +1,15 @@
+.bordered{
+    border: 2px solid blue;
+    padding: 7px;
+}
+
+.thumbnail{
+    list-style: none;
+}
+
+.popularCourses{
+    padding: 5px;
+    width: 150px; 
+    border: 1px solid #000000;
+     word-wrap: break-word;
+}

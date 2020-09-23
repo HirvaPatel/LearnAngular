@@ -1,0 +1,8 @@
+<div>
+    <ul *ngFor="let image of images; let i=index" class="thumbnail">
+      <li ><img [src]="image.src"  class="bouquets" (mouseover)="mouseEnter($event)" (mouseout)="mouseLeave($event)"></li>  
+    </ul>
+  </div>
+  <div>
+      <img [src]="hoveredImg" *ngIf="mouseenter"> 
+  </div>

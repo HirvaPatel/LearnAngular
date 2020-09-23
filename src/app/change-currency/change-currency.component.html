@@ -1,0 +1,11 @@
+<div>
+        <h3>Product Details</h3>
+        <div>
+          <b>Product Code </b>P001<br>
+          <b>Product Name </b>Apple MacBook Pro<br>
+          <b>Product Price </b>{{ProductPrice | currency: [(countryCurr)] : 'symbol'}}
+          <button (click)="changeCurr($event)" value='USD'>USD</button>
+          <button (click)="changeCurr($event)" value='CAD'>CAD</button>
+          <br>
+        </div>
+      </div>

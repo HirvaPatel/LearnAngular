@@ -1,0 +1,15 @@
+<h3> Products Ratings </h3>
+<table border=1>
+    <thead>
+        <tr>
+            <th> Product Id</th>
+            <th> Product Rating & Feedback</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rating of productRatings; index as i">
+            <td align="center"> {{ i+1 }}</td>
+            <td align="center"> {{ rating | i18nPlural:productMapping }} </td>
+        </tr>
+    </tbody>
+</table>
